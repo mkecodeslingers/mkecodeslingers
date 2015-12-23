@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Need to add this to fix windows issues and then run 'bundle update coffee-script-source'
+gem 'coffee-script-source', '1.8.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

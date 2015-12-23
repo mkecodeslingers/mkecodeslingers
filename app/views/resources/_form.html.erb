@@ -1,0 +1,46 @@
+<%= form_for @resource do |f| %>
+ 
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@resource.errors.count, "error") %> prohibited
+        this resource from being saved:
+      </h2>
+      <ul>
+        <% @resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :resource_type %><br>
+    <%= f.text_area :resource_type %>
+  </p>
+
+  <p>
+    <%= f.label :external_link %><br>
+    <%= f.text_area :external_link %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :category %><br>
+    <%= f.text_area :category %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

@@ -1,4 +1,34 @@
+<h1>Listing resources</h1>
+ 
+<%= link_to 'Add a new resource!', new_resource_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Resource Type</th>
+    <th>External Link</th>
+    <th>Description</th>
+    <th>Category</th>
+  </tr>
+ 
+  <% @resources.each do |resource| %>
+    <tr>
+      <td><%= resource.name %></td>
+      <td><%= resource.resource_type %></td>
+      <td><%= resource.external_link %></td>
+      <td><%= resource.description %></td>
+      <td><%= resource.category %></td>
+      <td><%= link_to 'Show', resource_path(resource) %></td>
+      <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+      <td><%= link_to 'Delete', resource_path(resource),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
 <h1>Resources</hi>
+	
+
 	<div>
 		<h2 class="resource_title">Google<h2>
 		<p class="external_link">External Link: <a href="https://www.google.com">google.com</a></p>

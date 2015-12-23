@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :resources
+
   root 'resources#index'
 
   controller :about do

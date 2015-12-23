@@ -1,0 +1,26 @@
+<p>
+  <strong>Name:</strong>
+  <%= @resource.name %>
+</p>
+ 
+<p>
+  <strong>Resource Type:</strong>
+  <%= @resource.resource_type %>
+</p>
+
+<p>
+  <strong>External Link:</strong>
+  <%= @resource.external_link %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @resource.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @resource.category %>
+</p>
+<%= link_to 'Edit', edit_resource_path(@resource) %>
+<%= link_to 'Back', resources_path %>
