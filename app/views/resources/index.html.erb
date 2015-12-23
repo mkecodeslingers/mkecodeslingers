@@ -1,36 +1,35 @@
-<h1>Listing resources</h1>
- 
+<h2>Listing resources</h2>
+
 <%= link_to 'Add a new resource!', new_resource_path %>
+<div class="resource_box">
+    <% @resources.each do |resource| %>
+        <h4 class="resource_title"><%= resource.name %></h4>
+        <ul>
+          <li>
+            <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
+          </li>
+          <li>
+            <%= resource.resource_type %>
+          </li>
+          <li>
+            <%= resource.description %>
+          </li>
+          <li>
+            <%= resource.category %>
+          </li>
+        </ul>
+          <%= link_to 'Show', resource_path(resource) %>
+          <%= link_to 'Edit', edit_resource_path(resource) %>
+          <%= link_to 'Delete', resource_path(resource),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    <% end %>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Resource Type</th>
-    <th>External Link</th>
-    <th>Description</th>
-    <th>Category</th>
-  </tr>
- 
-  <% @resources.each do |resource| %>
-    <tr>
-      <td><%= resource.name %></td>
-      <td><%= resource.resource_type %></td>
-      <td><%= resource.external_link %></td>
-      <td><%= resource.description %></td>
-      <td><%= resource.category %></td>
-      <td><%= link_to 'Show', resource_path(resource) %></td>
-      <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-      <td><%= link_to 'Delete', resource_path(resource),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
-<h1>Resources</hi>
-	
-
+<!--
+<h1>Resources</h1>
 	<div>
-		<h2 class="resource_title">Google<h2>
+		<h2 class="resource_title">Google</h2>
 		<p class="external_link">External Link: <a href="https://www.google.com">google.com</a></p>
 		<p class="description">Description: blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
 		<div class="type_of_resource">Type of Resource:
@@ -51,25 +50,4 @@
 			</select>
 		</div>
 	</div>
-	<div>
-		<h2 class="resource_title">GitHub<h2>
-		<p class="external_link">External Link: <a href="https://github.com/">google.com</a></p>
-		<p class="description">Description: blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		<div class="type_of_resource">Type of Resource:
-			<select class="dropdown">
-				<option>-Please select a type of resource-</option>
-				<option>Tool</option>
-				<option>How-to</option>
-				<option>General Learning</option>
-			</select>
-		</div>
-		<div class="category_title">Category:
-			<select class="dropdown">
-				<option>-Please select a category-</option>
-				<option>Ruby on Rails (Rails)</option>
-				<option>Test Suite</option>
-				<option>GitHub</option>
-				<option>Other</option>
-			</select>
-		</div>
-	</div>
+-->

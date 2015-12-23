@@ -6,3 +6,7 @@ Add custom styles in this file to override bootstrap's styles
 p {
 	color: blue;
 }
+
+.resource_title {
+	color: red;
+}
