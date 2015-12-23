@@ -1,0 +1,8 @@
+/*
+Add custom styles in this file to override bootstrap's styles
+*/
+
+/* Test */
+p {
+	color: blue;
+}
