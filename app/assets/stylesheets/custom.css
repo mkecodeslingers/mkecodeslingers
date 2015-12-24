@@ -3,10 +3,11 @@ Add custom styles in this file to override bootstrap's styles
 */
 
 /* Test */
-p {
-	color: blue;
-}
-
 .resource_title {
 	color: red;
+}
+
+/*Adjust Navbar overlay when fixed to top*/
+body { 
+	padding-top: 70px; 
 }

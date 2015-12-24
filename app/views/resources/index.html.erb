@@ -1,27 +1,55 @@
-<h2>Listing resources</h2>
+<div class="col-md-offset-3">
+  <div class="col-md-12">
+    <h2>Listing Resources</h2>
+    <br>
+    <div>
+      <%= link_to 'Add a new resource!', new_resource_path, class: 'btn btn-info' %>
+    </div>
+    <br>
+  </div>
 
-<%= link_to 'Add a new resource!', new_resource_path %>
-<div class="resource_box">
+  <div class="col-md-8">
     <% @resources.each do |resource| %>
-        <h4 class="resource_title"><%= resource.name %></h4>
-        <ul>
-          <li>
-            <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
-          </li>
-          <li>
-            <%= resource.resource_type %>
-          </li>
-          <li>
-            <%= resource.description %>
-          </li>
-          <li>
-            <%= resource.category %>
-          </li>
-        </ul>
-          <%= link_to 'Show', resource_path(resource) %>
-          <%= link_to 'Edit', edit_resource_path(resource) %>
-          <%= link_to 'Delete', resource_path(resource),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+      <div class="resource_box panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title resource_title"><%= resource.name %></h3>
+        </div>
+
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <li>
+              <strong>Resource Type:</strong>
+              <br>
+              <%= resource.resource_type %>
+            </li>
+            <br>
+            <li>
+              <strong>External Link:</strong>
+              <br>
+              <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
+            </li>
+            <br>
+            <li>
+              <strong>Description:</strong>
+              <br>
+              <%= resource.description %>
+            </li>
+            <br>
+            <li>
+              <strong>Category:</strong>
+              <br>
+              <%= resource.category %>
+            </li>
+          </ul>
+        </div>
+
+        <%= link_to 'Show', resource_path(resource), class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_resource_path(resource), class: 'btn btn-default' %>
+        <%= link_to 'Delete', resource_path(resource), class: 'btn btn-danger',
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
+  </div>
+  </div>
 </div>
