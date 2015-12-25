@@ -1,5 +1,4 @@
-<%= form_for @resource do |f| %>
-
+<%= simple_form_for @resource do |f| %>
 <% if @resource.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
       <h5>
@@ -22,8 +21,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :resource_type %><br>
-        <%= f.text_area :resource_type, class: 'form-control' %>
+        <%= f.input :resource_type, collection: [:Resource1, :Resource2] %>
       </div>
 
       <div class="form-group">
@@ -37,8 +35,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :category %><br>
-        <%= f.text_area :category, class: 'form-control' %>
+        <%= f.input :category, collection: [:Category1, :Category2], class: 'form-control' %>
       </div>
 
       <div class="form-group">
