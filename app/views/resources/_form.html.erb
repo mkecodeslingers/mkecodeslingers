@@ -1,46 +1,50 @@
 <%= form_for @resource do |f| %>
 
-  <% if @resource.errors.any? %>
-    <div id="error_explanation">
-      <h2>
+<% if @resource.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h5>
         <%= pluralize(@resource.errors.count, "error") %> prohibited
         this resource from being saved:
-      </h2>
+      </h5>
       <ul>
         <% @resource.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
+<% end %>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+<div>
+    <form>
+      <div class="form-group ">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
 
-  <p>
-    <%= f.label :resource_type %><br>
-    <%= f.text_area :resource_type %>
-  </p>
+      <div class="form-group">
+        <%= f.label :resource_type %><br>
+        <%= f.text_area :resource_type, class: 'form-control' %>
+      </div>
 
-  <p>
-    <%= f.label :external_link %><br>
-    <%= f.text_area :external_link %>
-  </p>
+      <div class="form-group">
+        <%= f.label :external_link %><br>
+        <%= f.text_area :external_link, class: 'form-control' %>
+      </div>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+      <div class="form-group">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: 'form-control' %>
+      </div>
 
-  <p>
-    <%= f.label :category %><br>
-    <%= f.text_area :category %>
-  </p>
+      <div class="form-group">
+        <%= f.label :category %><br>
+        <%= f.text_area :category, class: 'form-control' %>
+      </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+      <div class="form-group">
+        <%= f.submit class: 'btn btn-success' %>
+      </div>
+    </form>
+</div>
 
 <% end %>

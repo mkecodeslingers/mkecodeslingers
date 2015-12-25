@@ -1,26 +1,37 @@
-<p>
-  <strong>Name:</strong>
-  <%= @resource.name %>
-</p>
- 
-<p>
-  <strong>Resource Type:</strong>
-  <%= @resource.resource_type %>
-</p>
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @resource.name %></h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li>
+            <strong>Resource Type:</strong>
+            <br>
+            <%= @resource.resource_type %>
+          </li>
+          <br>
+          <li>
+            <strong>External Link:</strong>
+            <br>
+            <%= @resource.external_link %>
+          </li>
+          <br>
+          <li>
+            <strong>Description:</strong>
+            <br>
+            <%= @resource.description %>
+          </li>
+          <br>
+          <li>
+            <strong>Category:</strong>
+            <br>
+            <%= @resource.category %>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<p>
-  <strong>External Link:</strong>
-  <%= @resource.external_link %>
-</p>
- 
-<p>
-  <strong>Description:</strong>
-  <%= @resource.description %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @resource.category %>
-</p>
-<%= link_to 'Edit', edit_resource_path(@resource) %>
-<%= link_to 'Back', resources_path %>
+    <%= link_to 'Finish', resources_path, class: 'btn btn-success' %>
+    <%= link_to 'Edit', edit_resource_path(@resource), class: 'btn btn-primary' %>
+</div>
