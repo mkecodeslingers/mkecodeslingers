@@ -13,18 +13,20 @@
     		<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
     			<a class="navbar-brand" <%= link_to 'MKE Code Slingers', root_path, :class => '' %></a>
-    		</div>   
+    		</div>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Home', root_path, :class => '' %></li>
           <li><%= link_to 'About', about_path, :class => '' %></li>
-        </ul> 
+        </ul>
   		</div><!-- /.container-fluid -->
   	</nav>
   <%= yield %>
   </body>
   <footer>
     <div class="container">
-      <p class="text-muted">Place sticky footer content here.</p>
+      <a href="http://milwaukeecodeslingers.org">&copy;MilwaukeeCodeSlingers</a>
+      <a href="http://www.meetup.com/MKE-Code-Slingers/events/" class="GitHubIcon">MeetUp</a>
+      <a href="https://github.com/mkecodeslingers" class="MeetupIcon">GitHub</a>
     </div>
   </footer>
 </html>
