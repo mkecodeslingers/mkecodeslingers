@@ -8,13 +8,23 @@ Add custom styles in this file to override bootstrap's styles
 }
 
 /*Adjust Navbar overlay when fixed to top*/
-body { 
+body {
 	padding-top: 70px;
 }
 
+
+
+
+/*Footer CSS*/
 footer {
     background-color: #333;
+		height: 3%;
+		min-height: 20px;
     width: 100%;
     bottom: 0;
     position: fixed;
+}
+
+footer div a {
+	padding: 0 20px;
 }
