@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
   resources :resources
+  resources :topics do
+    member do
+      post 'upvote'
+    end
+  end
 
+  get 'resources/index' => 'resources#index'
+  get 'topics/index' => 'topics#index'
   root 'resources#index'
 
   controller :about do
