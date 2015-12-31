@@ -1,0 +1,25 @@
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @topic.title %></h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li>
+            <strong>Topic Type:</strong>
+            <br>
+            <%= @topic.topic_type %>
+          </li>
+          <br>
+          <li>
+            <strong>Description:</strong>
+            <br>
+            <%= @topic.description %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <%= link_to 'Finish', topics_path, class: 'btn btn-success' %>
+    <%= link_to 'Edit', edit_topic_path(@topic), class: 'btn btn-primary' %>
+</div>
