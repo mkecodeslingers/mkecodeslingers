@@ -19,7 +19,7 @@ class ResourcesController < ApplicationController
 		@resource = Resource.new(resource_params)
 
   		if @resource.save
-  		redirect_to @resource
+  			redirect_to @resource
   		else
     		render 'new'
   		end
