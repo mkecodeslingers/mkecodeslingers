@@ -1,54 +1,55 @@
-<div class="col-md-offset-3">
-  <div class="col-md-12">
-    <h2>Listing Resources</h2>
+<div>
+  <div>
+    <h2 class="col-md-5 col-md-offset-1">Listing Resources</h2>
     <br>
-    <div>
+    <div class="col-md-3 col-md-offset-3">
       <%= link_to 'Add a new resource!', new_resource_path, class: 'btn btn-info' %>
     </div>
-    <br>
   </div>
 
-  <div class="col-md-8" style="padding-bottom: 25px">
+  <div class=" col-md-8 col-md-offset-2" style="padding: 35px 0px">
     <% @resources.each do |resource| %>
-      <div class="resource_box panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title resource_title"><%= resource.name %></h3>
-        </div>
+      <div class="col-md-4">
+        <div class="resource_box panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title resource_title"><%= resource.name %></h3>
+          </div>
 
-        <div class="panel-body">
-          <ul class="list-unstyled">
-            <li>
-              <strong>Resource Type:</strong>
+          <div class="panel-body">
+            <ul class="list-unstyled">
+              <li>
+                <strong>Resource Type:</strong>
+                <br>
+                <%= resource.resource_type %>
+              </li>
               <br>
-              <%= resource.resource_type %>
-            </li>
-            <br>
-            <li>
-              <strong>External Link:</strong>
+              <li>
+                <strong>External Link:</strong>
+                <br>
+                <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
+              </li>
               <br>
-              <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
-            </li>
-            <br>
-            <li>
-              <strong>Description:</strong>
+              <li>
+                <strong>Description:</strong>
+                <br>
+                <%= resource.description %>
+              </li>
               <br>
-              <%= resource.description %>
-            </li>
-            <br>
-            <li>
-              <strong>Category:</strong>
-              <br>
-              <%= resource.category %>
-            </li>
-          </ul>
-        </div>
+              <li>
+                <strong>Category:</strong>
+                <br>
+                <%= resource.category %>
+              </li>
+            </ul>
+          </div>
 
-       <div style="padding-bottom:5px;padding-left:5px"> 
-          <%= link_to 'Show', resource_path(resource), class: 'btn btn-default' %>
-          <%= link_to 'Edit', edit_resource_path(resource), class: 'btn btn-default' %>
-          <%= link_to 'Delete', resource_path(resource), class: 'btn btn-danger',
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %> 
+          <div style="padding-bottom:5px;padding-left:5px"> 
+            <%= link_to 'Show', resource_path(resource), class: 'btn btn-default' %>
+            <%= link_to 'Edit', edit_resource_path(resource), class: 'btn btn-default' %>
+            <%= link_to 'Delete', resource_path(resource), class: 'btn btn-danger',
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %> 
+          </div>
         </div>
       </div>
     <% end %>
