@@ -1,44 +1,51 @@
 == README
+# MKE Code Slingers site
 
-This README covers the following:
+### Current versions
 
 * Ruby version - currently running ruby 2.2.1p85 (2015-02-26 revision 49769)
 * Rails version - currently running Rails 4.2.5
 
-To contribute to this project:
+### Purpose of the project
+
+MKE Code Slingers started as a Meetup group and we decided to create a site for the group in Ruby on Rails as one of the first official group projects.
+The Meetup site is used to schedule meetings and push announcements, but it became necessary to have a searchable list of resources and tools.
+Besides that core feature, having a public About page for the group seemed like a logical choice for core functionality, along with a hub of where to send new and current members.
+Links to key tools that the group uses and voting for upcoming topics are features as well.
+Basically, the site is a hub and a repository of info for the group.
+
+### Contributing
 
 * Setup your environment - we followed RailsBridge Docs Installfest http://docs.railsbridge.org/installfest/
-
 * Clone the Github repository - navigate to root folder in console/terminal, run the command "git clone https://github.com/mkecodeslingers/mkecodeslingers.git"
-
 * NOTE - in order to install gems for the first time, you will have to do an initial "bundle install --without production", then do a commit afterwards to sync the Gemfile.lock
 
 
-Git/Github Workflow for this project:
+##### Git/Github Workflow for this project:
 
-1) in project folder, "git pull" assuming you are on your local master branch - use "git status" to check
-2) Your local and the remote should be the same or synced
-3) Create a new local branch for your changes - "git branch <name_of_your_branch>" - make sure your branch name is unique versus branches on Github repository
+1. in project folder, "git pull" assuming you are on your local master branch - use "git status" to check
+2. Your local and the remote should be the same or synced
+3. Create a new local branch for your changes - "git branch <name_of_your_branch>" - make sure your branch name is unique versus branches on Github repository
 example for naming: "savatski_footer" or "mark_index_changes", you can use numbers too
-4) "git checkout <name_of_your_branch>" switches to the local branch
-5) make your local changes, should always smoke test (i.e. click through on localhost to make sure it's not broken)
+4. "git checkout <name_of_your_branch>" switches to the local branch
+5. make your local changes, should always smoke test (i.e. click through on localhost to make sure it's not broken)
 !!! DO NOT commit code if you know that there are errors - please fix errors first !!!
 
-"git add ." to add all changes (you can specify specific folders or files if you wish)
-"git commit -am "add a message that is a concise description of what you added/changed" "
-"git push origin <name_of_your_branch>" to create a remote version of your branch
+    >   "git add ." to add all changes (you can specify specific folders or files if you wish)
+        "git commit -am "add a message that is a concise description of what you added/changed" "
+        "git push origin <name_of_your_branch>" to create a remote version of your branch
 
-6) go to the repository page on Github https://github.com/mkecodeslingers/mkecodeslingers
-7) your branch should be listed as "Your recently pushed branches" - you want to click the button "Compare & pull request"
+6. go to the repository page on Github https://github.com/mkecodeslingers/mkecodeslingers
+7. your branch should be listed as "Your recently pushed branches" - you want to click the button "Compare & pull request"
 
-* Once we start adding tests to our project, the tests will automatically run before you can create a pull request and need to pass before you can merge (unless you wish to override)
+    > Once we start adding tests to our project, the tests will automatically run before you can create a pull request and need to pass before you can merge (unless you wish to override)
 
-8) add any comments or further descriptions that you wish, then click button "Create pull request"
-9) someone besides the author of the pull request needs to go in and review code for the following things - syntax, logic/functionality, does it fulfill the scope of the task on Trello, etc
-10) once you click "Merge" and then "Confirm" the changes in the remote branch are merged with the remote Master branch - every so often, go thru and delete your remote branches on Github that are not in use please
+8. add any comments or further descriptions that you wish, then click button "Create pull request"
+9. someone besides the author of the pull request needs to go in and review code for the following things - syntax, logic/functionality, does it fulfill the scope of the task on Trello, etc
+10. once you click "Merge" and then "Confirm" the changes in the remote branch are merged with the remote Master branch - every so often, go thru and delete your remote branches on Github that are not in use please
 
 
-Future things we may want to include:
+######<i>Future things we may want to include:</i>
 
 * System dependencies
 
