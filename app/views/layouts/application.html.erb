@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
   	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
@@ -27,10 +28,10 @@
   <%= yield %>
   </body>
   <footer>
-    <div class="container">
-      <a href="http://milwaukeecodeslingers.org">&copy;MilwaukeeCodeSlingers</a>
-      <a href="http://www.meetup.com/MKE-Code-Slingers/events/" class="GitHubIcon">MeetUp</a>
-      <a href="https://github.com/mkecodeslingers" class="MeetupIcon">GitHub</a>
+    <div class="container-fluid">
+      <a href="http://milwaukeecodeslingers.org" class="copy-right">&copy;MilwaukeeCodeSlingers</a>
+      <a href="http://www.meetup.com/MKE-Code-Slingers/events/" class="GitHubIcon social">MeetUp</a>
+      <a href="https://github.com/mkecodeslingers" class="MeetupIcon social"><i class="fa fa-github fa-2x"></i></a>
     </div>
   </footer>
 </html>
