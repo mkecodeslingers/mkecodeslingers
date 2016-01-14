@@ -29,42 +29,55 @@ Contact us at mkecodeslingers@gmail.com to get added to the Trello board and inv
 = Contributing
 
 * Setup your environment - we followed RailsBridge Docs Installfest http://docs.railsbridge.org/installfest/
-* Clone the Github repository - navigate to root folder in console/terminal, run the command "git clone https://github.com/mkecodeslingers/mkecodeslingers.git"
+* Clone the Github repository - navigate to root folder in console/terminal, and run the command
 
-        NOTE - in order to install gems for the first time, you will have to do an initial "bundle install --without production"
-        Then do a commit afterwards to sync the Gemfile.lock
+        git clone https://github.com/mkecodeslingers/mkecodeslingers.git
+
+==== NOTE
+In order to install gems for the first time, you will have to do an initial
+
+        bundle install --without production
+
+Then do a commit afterwards to sync the Gemfile.lock
 
 
 == Git/Github Workflow for the project:
 
-1) in project folder, "git pull" assuming you are on your local master branch - use "git status" to check
+1) Once you are in project folder in Terminal/Console (assuming you are on your local master branch)
+
+        git pull
+
+And you can check to see which branch you are currently on with
+
+        git status
 
 2) Your local and the remote should be the same or synced
 
-3) Create a new local branch for your changes - "git branch <name_of_your_branch>" - make sure your branch name is unique versus branches on Github repository ("savatski_footer" or "mark_index_changes")
+3) Create a new local branch for your changes
 
-4) "git checkout <name_of_your_branch>" switches to the local branch
+        git branch <name_of_your_branch>
 
-5) make your local changes, should always smoke test (i.e. click through on localhost to make sure it's not broken) - please fix all known errors first !!!
+Make sure your branch name is unique versus branches on Github repository ("savatski_footer" or "mark_index_changes")
 
-        "git add ." to add all changes (you can specify specific folders or files if you wish)
-        "git commit -am "add a message that is a concise description of what you added/changed" "
-        "git push origin <name_of_your_branch>" to create a remote version of your branch
+4) Switch to the local branch that you just created
 
-6) go to the repository page on Github https://github.com/mkecodeslingers/mkecodeslingers
+        git checkout <name_of_your_branch>
 
-7) your branch should be listed as "Your recently pushed branches" - you want to click the button "Compare & pull request"
+5) Make your local changes, should always smoke test (i.e. click through on localhost to make sure it's not broken) - please fix all known errors first !!!
 
-        Once tests are setup, the tests will automatically run upon creating a pull request
-        They need to pass before you can merge (unless you wish to override)
+        git add . <!-- to add all changes (you can specify specific folders or files if you wish)-->
+        git commit -am "add a message that is a concise description of what you added/changed"
+        git push origin <name_of_your_branch> <!-- to create a remote version of your branch -->
 
-8) add any comments or further descriptions that you wish, then click button "Create pull request"
+6) Go to the repository page on Github https://github.com/mkecodeslingers/mkecodeslingers
 
-9) someone besides the author of the pull request needs to go in and review code for the following things - syntax, logic/functionality, does it fulfill the scope of the task on Trello, etc
+7) Your branch should be listed as "Your recently pushed branches" - you want to click the button "Compare & pull request". Once tests are setup, the tests will automatically run upon creating a pull request. They need to pass before you can merge (unless you wish to override).
 
-        You can easily view all code changes by clicking on the commit id
+8) Add any comments or further descriptions that you wish, then click button "Create pull request".
 
-10) once you click "Merge" and then "Confirm" the changes in the remote branch are merged with the remote Master branch - every so often, please go through and delete your remote branches on Github that are not in use
+9) Someone besides the author of the pull request needs to go in and review code for the following things - syntax, logic/functionality, does it fulfill the scope of the task on Trello, etc. You can easily view all code changes by clicking on the commit id in the pull request. Add comments that are specific and helpful. Include links or code snippets if you can to suggest changes. Any updates will be sent to all who added to code review or pull request via Github to your email.
+
+10) Once you click "Merge" and then "Confirm" the changes in the remote branch are merged with the remote Master branch - every so often, please go through and delete your remote branches on Github that are not in use.
 
 11) In order to push the changes to production, you currently need access to the group Heroku account. Plans are in place to implement continuous integration/auto deployment.
 
