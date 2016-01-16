@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'group_projects/group_projects'
+
   resources :resources
   resources :topics do
     member do
