@@ -11,7 +11,9 @@ Add custom styles in this file to override bootstrap's styles
     padding: 20px 50px 60px;
     text-transform: uppercase;
     text-align: center;
-} h3 {
+}
+
+.intro h3 {
       color: #e8e8e8;
   }
 
