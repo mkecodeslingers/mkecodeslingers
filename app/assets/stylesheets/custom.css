@@ -2,14 +2,48 @@
 Add custom styles in this file to override bootstrap's styles
 */
 
-/* Test */
-.resource_title {
-	color: red;
+/************
+* Jumbotron *
+************/
+
+.intro {
+    background-color: #5BC0DE;
+    padding: 20px 50px 60px;
+    text-transform: uppercase;
+    text-align: center;
+} h3 {
+      color: #e8e8e8;
+  }
+
+/*********
+* Navbar *
+*********/
+
+.navbar-inverse {
+    background-color: #5BC0DE;
+    background-image: none;
+    border: none;
+    color: #2b669a;
+    font-size: 16px;
 }
+
+.navbar-inverse .navbar-nav li a {
+    color: #5e5e5e;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #5e5e5e;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 
 /*Adjust Navbar overlay when fixed to top*/
 body {
-	padding-top: 70px;
+	padding-top: 50px;
 }
 
 .about {
@@ -34,3 +68,4 @@ footer div a {
 .social {
 	float: right;
 }
+
