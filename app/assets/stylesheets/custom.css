@@ -2,29 +2,134 @@
 Add custom styles in this file to override bootstrap's styles
 */
 
-/* Test */
-.resource_title {
-	color: red;
-}
 
 /*Adjust Navbar overlay when fixed to top*/
 body {
-	padding-top: 70px;
+    padding-top: 50px;
+    background-color: #f9f9f9;
+}
+
+
+
+/************
+* Jumbotron *
+************/
+
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+.intro {
+    background-color: #5BC0DE;
+    padding: 20px 50px 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro h3 {
+      color: #e8e8e8;
+  }
+
+
+
+/*********
+* Navbar *
+*********/
+
+.navbar-inverse {
+    background-color: #5BC0DE;
+    background-image: none;
+    border: none;
+    color: #2b669a;
+    font-size: 16px;
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: #eee;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #5e5e5e;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+/*************
+* About Page *
+*************/
+
+.title {
+    margin-top: 200px;
+    color: #eee;
 }
 
 .about {
-	padding-bottom: 70px;
+    background:
+                linear-gradient(#000, transparent 100%),
+                url('mountains.jpg') no-repeat center;
+
+    background-size: cover;
+    height: 850px;
+    width: 100%;
 }
 
-/*Footer CSS*/
+
+
+/****************
+* Resource Page *
+****************/
+
+.resource-container {
+    width: 100%;
+    margin-right: 2%;
+    padding-left: 3.5%;
+}
+
+.search-sort {
+    padding: 2% 2% 1%;
+    border-bottom: 1px solid #d4d9dd;
+    margin-bottom: 30px;
+}
+
+
+.booyah-box {
+    -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    box-shadow: 1px 1px 2px 0 #d0d0d0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding:20px;
+    min-height: 20em;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    width: 45%;
+    display: inline-block;
+    float: left;
+}
+.booyah-box h2, .booyah-box h1 {
+    margin:10px;
+}
+
+
+
+/*********
+* Footer *
+*********/
+
 footer {
-    background-color: #333;
-		height: auto;
-		min-height: 20px;
+    background-color: transparent;
+    height: auto;
+    min-height: 20px;
     width: 100%;
     bottom: 0;
-    position: fixed;
     padding: 5px;
+    display: block;
 }
 
 footer div a {
@@ -34,3 +139,17 @@ footer div a {
 .social {
 	float: right;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

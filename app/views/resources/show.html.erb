@@ -34,4 +34,7 @@
 
     <%= link_to 'Finish', resources_path, class: 'btn btn-success' %>
     <%= link_to 'Edit', edit_resource_path(@resource), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', resource_path(@resource), class: 'btn btn-danger',
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 </div>
