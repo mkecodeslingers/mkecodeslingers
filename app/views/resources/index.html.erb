@@ -1,60 +1,28 @@
-<div>
+<div class="">
   <div class="jumbotron intro">
     <h1>Welcome to our <br> temple of knowledge!</h1>
     <h3>This is where we share all of our favorite tutorials, guides, and resources.</h3>
   </div>
 
-  <div>
-    <h2 class="col-md-5 col-md-offset-1">Listing Resources</h2>
-    <br>
-    <div class="col-md-3 col-md-offset-3">
-      <%= link_to 'Add a new resource!', new_resource_path, class: 'btn btn-info' %>
+  <div class="search-sort row">
+    <div class="col-md-2 col-md-offset-3">
+      <%= link_to 'Add a new resource!', new_resource_path, class: 'btn btn-info add-new' %>
+    </div>
+    <div class="form-group col-md-4 col-md-offset-0">
+      <input type="text" class="form-control" placeholder="Search resources or categories">
     </div>
   </div>
 
-  <div class=" col-md-8 col-md-offset-2" style="padding: 35px 0px">
+  <div class="resource-container">
     <% @resources.each do |resource| %>
-      <div class="col-md-6">
-        <div class="resource_box panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title resource_title"><%= resource.name %></h3>
-          </div>
-
-          <div class="panel-body">
-            <ul class="list-unstyled">
-              <li>
-                <strong>Resource Type:</strong>
-                <br>
-                <%= resource.resource_type %>
-              </li>
-              <br>
-              <li>
-                <strong>External Link:</strong>
-                <br>
-                <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
-              </li>
-              <br>
-              <li>
-                <strong>Description:</strong>
-                <br>
-                <%= resource.description %>
-              </li>
-              <br>
-              <li>
-                <strong>Category:</strong>
-                <br>
-                <%= resource.category %>
-              </li>
-            </ul>
-          </div>
-
-          <div style="padding-bottom:5px;padding-left:5px"> 
-            <%= link_to 'Show', resource_path(resource), class: 'btn btn-default' %>
-            <%= link_to 'Edit', edit_resource_path(resource), class: 'btn btn-default' %>
-            <%= link_to 'Delete', resource_path(resource), class: 'btn btn-danger',
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %> 
-          </div>
+      <div class="">
+        <div class="booyah-box">
+          <a href="<%= resource_path(resource) %>"><h3><%= resource.name %></h3></a>
+          <%= resource.resource_type %>
+          <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
+          <%= resource.description %>
+          <%= resource.category %>
+          </li>
         </div>
       </div>
     <% end %>
