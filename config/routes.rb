@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'resources/index' => 'resources#index'
   get 'topics/index' => 'topics#index'
-  root 'resources#index'
+  root 'about#about'
 
   controller :about do
     get :about
