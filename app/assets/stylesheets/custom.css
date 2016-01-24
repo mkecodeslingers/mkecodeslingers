@@ -116,7 +116,15 @@ body {
     margin:10px;
 }
 
+/*************
+* Topic Page *
+*************/
 
+.topic-container {
+    width: 100%;
+    margin-right: 2%;
+    padding-left: 3.5%;
+}
 
 /*********
 * Footer *

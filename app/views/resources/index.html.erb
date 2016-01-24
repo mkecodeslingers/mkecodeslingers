@@ -17,12 +17,11 @@
     <% @resources.each do |resource| %>
       <div class="">
         <div class="booyah-box">
-          <a href="<%= resource_path(resource) %>"><h3><%= resource.name %></h3></a>
+          <a href="<%= resource_path(resource) %>"><h3 class="card"><%= resource.name %></h3></a>
           <%= resource.resource_type %>
           <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
           <%= resource.description %>
           <%= resource.category %>
-          </li>
         </div>
       </div>
     <% end %>

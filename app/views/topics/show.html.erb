@@ -22,4 +22,7 @@
 
     <%= link_to 'Finish', topics_path, class: 'btn btn-success' %>
     <%= link_to 'Edit', edit_topic_path(@topic), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', topic_path(@topic), class: 'btn btn-danger',
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
 </div>

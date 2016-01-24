@@ -11,6 +11,18 @@ $(document).ready(function() {
     {
         $('.navbar-inverse').css('background-color', '#5BC0DE');
         $('.navbar-inverse .navbar-nav li a').css('color', '#eee');
+        $('.intro').css('background-color', '#5BC0DE');
+        $('.btn-info').css('background-color', '#5BC0DE');
+        $('.card').css('color', '#5BC0DE');
+    }
+
+    if ($( "div" ).hasClass( "topics" ))
+    {
+        $('.navbar-inverse').css('background-color', '#00cc44');
+        $('.navbar-inverse .navbar-nav li a').css('color', '#eee');
+        $('.intro').css('background-color', '#00cc44');
+        $('.btn-info').css('background-color', '#00cc44');
+        $('.card').css('color', '#00cc44');
     }
 
 });
