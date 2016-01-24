@@ -1,49 +1,27 @@
-<div>
-  <div>
-    <h2 class="col-md-5 col-md-offset-1">Listing Topics</h2>
-    <br>
-    <div class="col-md-3 col-md-offset-3">
-      <%= link_to 'Add a new topic!', new_topic_path, class: 'btn btn-info' %>
+<div class="topics">
+  <div class="jumbotron intro">
+    <h1>See what we'll be <br> getting into next!</h1>
+    <h3>This is where we add and vote on topics we'll cover in out meetups.</h3>
+  </div>
+
+  <div class="search-sort row">
+    <div class="col-sm-2 col-sm-offset-3">
+      <%= link_to 'Add a new topic!', new_topic_path, class: 'btn btn-info add-new' %>
+    </div>
+    <div class="form-group col-sm-4">
+      <input type="text" class="form-control" placeholder="Search topics">
     </div>
   </div>
 
-  <div class=" col-md-8 col-md-offset-2" style="padding: 35px 0px">
+  <div class=" topic-container">
     <% @topics.each do |topic| %>
-      <div class="col-md-6">
-        <div class="resource_box panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title resource_title" style="text-align:center">
-              <%= pluralize(topic.votes.count, "Vote") %>
-            </h3>
-            <h3 class="panel-title resource_title", style="display: inline">
-              <strong><%= topic.title %></strong>         
-            </h3>          
-          </div>
-
-          <div class="panel-body">
-            <ul class="list-unstyled">            
-              <li>
-                <strong>Topic Type:</strong>
-                <br>
-                <%= topic.topic_type %>
-              </li>
-              <br>
-              <li>
-                <strong>Description:</strong>
-                <br>
-                <%= topic.description %>
-              </li>
-            </ul>
-          </div>
-
-          <div style="padding-bottom:5px;padding-left:5px">
-            <%= link_to 'Vote!', upvote_topic_path(topic), class: 'btn btn-primary',method: :post %> 
-            <%= link_to 'Show', topic_path(topic), class: 'btn btn-default' %>
-            <%= link_to 'Edit', edit_topic_path(topic), class: 'btn btn-default' %>
-            <%= link_to 'Delete', topic_path(topic), class: 'btn btn-danger',
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>          
-          </div>
+        <div class="">
+          <div class="booyah-box">
+            <%= pluralize(topic.votes.count, "Vote") %>
+            <a href="<%= topic_path(topic) %>"><h3 class="card"><%= topic.title %></h3></a>      
+            <%= topic.topic_type %>
+            <%= topic.description %>
+            <%= link_to 'Vote!', upvote_topic_path(topic), class: 'btn btn-info add-new',method: :post %>
         </div>
       </div>
     <% end %>
