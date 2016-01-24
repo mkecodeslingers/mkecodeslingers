@@ -17,4 +17,4 @@
 /tmp
 
 # no .idea files
-*.idea
+*.idea/*
