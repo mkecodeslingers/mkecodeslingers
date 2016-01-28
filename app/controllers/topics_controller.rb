@@ -1,6 +1,12 @@
 class TopicsController < ApplicationController
 	def index
-		@topics = Topic.all.sort_by { |topic| topic.votes.count }.reverse!
+		if params[:topic_type] == 'Lightning Talk'
+			@topics = Topic.topic_type('Lightning Talk')
+		elsif params[:topic_type] == 'Large Demo'
+			@topics = Topic.topic_type('Large Demo')
+		else
+			@topics = Topic.all.sort_by { |topic| topic.votes.count }.reverse!
+		end
   	end
 
   	def show
