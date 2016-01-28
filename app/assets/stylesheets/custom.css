@@ -126,6 +126,17 @@ body {
     padding-left: 3.5%;
 }
 
+/*************
+* Topic Card *
+*************/
+
+.topic-card-header {
+    padding: 2% 2% 1%;
+    border-bottom: 1px solid #d4d9dd;
+    margin-bottom: 30px;
+}
+
+
 /*********
 * Footer *
 *********/
@@ -147,16 +158,3 @@ footer div a {
 .social {
 	float: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
