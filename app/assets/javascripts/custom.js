@@ -26,7 +26,7 @@
 //});
 
 //Back to top button
-var offset = 50;
+var offset = 40;
 var duration = 300;
 
 $(window).scroll(function() {
