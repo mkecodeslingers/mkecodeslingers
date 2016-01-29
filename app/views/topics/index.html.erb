@@ -9,9 +9,15 @@
       <%= link_to 'Add a new topic!', new_topic_path, class: 'btn btn-info add-new' %>
     </div>
     <div class="btn-group col-sm-3" role="group" aria-label="...">
-      <button type="button" class="btn btn-info add-new">Show All</button>
-      <button type="button" class="btn btn-info add-new">Lightning Talks</button>
-      <button type="button" class="btn btn-info add-new">Large Demo</button>
+      <button type="button" class="btn btn-info add-new">
+        <%= link_to 'Show All', topics_path(:topic_type => 'All') %>
+      </button>
+      <button type="button" class="btn btn-info add-new">
+        <%= link_to 'Lightning Talks', topics_path(:topic_type => 'Lightning Talk') %>
+      </button>
+      <button type="button" class="btn btn-info add-new">
+        <%= link_to 'Large Demo', topics_path(:topic_type => 'Large Demo') %>
+      </button>
     </div>
     <div class="form-group col-sm-3">
       <input type="text" class="form-control" placeholder="Search topics">
