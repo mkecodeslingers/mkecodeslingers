@@ -6,6 +6,7 @@ Add custom styles in this file to override bootstrap's styles
 /*Adjust Navbar overlay when fixed to top*/
 body {
     background-color: #f9f9f9;
+    font-family: 'Oxygen', sans-serif;
 }
 
 
@@ -86,7 +87,12 @@ body {
     z-index: 100;
     display: none;
     text-decoration: none;
-    color: #f0ad4e;
+    /*color: #f0ad4e;*/
+    color: rgba(240,173,78,.5);
+}
+
+.up:hover {
+    color: rgb(240,173,78);
 }
 
 
@@ -115,6 +121,19 @@ body {
     margin-top: 90px;
 }
 
+.name h1{
+    width: 100%;
+    background-color: #306185;
+    padding: 30px;
+    margin: 0;
+    color: #eee;
+    border-bottom: 3px solid #1b5185;
+}
+
+.more-about {
+    border-bottom: 1px solid #d4d9dd;
+    padding: 30px 0;
+}
 
 
 /****************
@@ -152,6 +171,8 @@ body {
 .booyah-box h2, .booyah-box h1 {
     margin:10px;
 }
+
+
 
 /*************
 * Topic Page *
