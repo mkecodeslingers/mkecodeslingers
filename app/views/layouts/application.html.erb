@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   </head>
   <body>
-  	<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+  	<nav class="navbar navbar-inverse navbar-static-top">
   		<div class="container-fluid">
-    		<!-- Brand and toggle get grouped for better mobile display -->
     		<div class="navbar-header">
     			<!--<a class="navbar-brand" <%= link_to 'MKE Code Slingers', root_path, :class => '' %></a>-->
     		</div>
@@ -22,12 +22,14 @@
             <li><%= link_to 'Topics', topics_path, :class => '' %></li>
           </ul> 
         </ul>
-  		</div><!-- /.container-fluid -->
+  		</div>
   	</nav>
-  <%= yield %>
+    <%= yield %>
+    <a class="up"><i class="fa fa-arrow-up fa-3x"></i></a>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </body>
   <footer>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <div class="container-fluid col-sm-12">
       <a href="http://milwaukeecodeslingers.org" class="copy-right">&copy;2016 MilwaukeeCodeSlingers</a>
       <a href="http://www.meetup.com/MKE-Code-Slingers/events/" class="GitHubIcon social">MeetUp</a>
