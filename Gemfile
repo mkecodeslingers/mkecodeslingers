@@ -46,8 +46,12 @@ gem 'coffee-script-source', '1.8.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'rspec-mocks'
+  gem 'shoulda-matchers'
+  gem 'spring'
 end
 
 group :development do
