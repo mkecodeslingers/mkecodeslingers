@@ -28,6 +28,8 @@ Contact us at mkecodeslingers@gmail.com to get added to the Trello board and inv
 
 = Contributing
 
+* In order to be added as a contributor, contact mkecodeslingers@gmail.com or reach out to us on GitHub.
+* Our agile board is on Trello and we use Slack channel for team communication.
 * Setup your environment - we followed RailsBridge Docs Installfest http://docs.railsbridge.org/installfest/
 * Clone the Github repository - navigate to root folder in console/terminal, and run the command
 
