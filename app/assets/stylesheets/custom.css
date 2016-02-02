@@ -5,8 +5,8 @@ Add custom styles in this file to override bootstrap's styles
 
 /*Adjust Navbar overlay when fixed to top*/
 body {
-    padding-top: 50px;
     background-color: #f9f9f9;
+    font-family: 'Oxygen', sans-serif;
 }
 
 
@@ -20,15 +20,26 @@ body {
 }
 
 .intro {
-    background-color: #5BC0DE;
-    padding: 20px 50px 60px;
+    padding: 70px 50px 60px;
     text-transform: uppercase;
     text-align: center;
 }
 
 .intro h3 {
       color: #e8e8e8;
-  }
+}
+
+.resources {
+    background-color: #5BC0DE;
+}
+
+.topics {
+    background-color: #5cb85c;
+}
+
+.members {
+    background-color: #d9534f;
+}
 
 
 
@@ -37,7 +48,7 @@ body {
 *********/
 
 .navbar-inverse {
-    background-color: #5BC0DE;
+    background-color: transparent;
     background-image: none;
     border: none;
     color: #2b669a;
@@ -55,6 +66,33 @@ body {
     text-shadow: none;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.navbar {
+    margin-bottom: -50px;
+
+}
+
+
+
+/*********************
+* Back to top button *
+*********************/
+
+.up {
+    margin: 0;
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    /*color: #f0ad4e;*/
+    color: rgba(240,173,78,.5);
+}
+
+.up:hover {
+    color: rgb(240,173,78);
 }
 
 
@@ -78,6 +116,24 @@ body {
     width: 100%;
 }
 
+.arrow {
+    padding-left: 0;
+    margin-top: 90px;
+}
+
+.name h1{
+    width: 100%;
+    background-color: #306185;
+    padding: 30px;
+    margin: 0;
+    color: #eee;
+    border-bottom: 3px solid #1b5185;
+}
+
+.more-about {
+    border-bottom: 1px solid #d4d9dd;
+    padding: 30px 0;
+}
 
 
 /****************
@@ -115,6 +171,8 @@ body {
 .booyah-box h2, .booyah-box h1 {
     margin:10px;
 }
+
+
 
 /*************
 * Topic Page *

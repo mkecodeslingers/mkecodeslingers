@@ -1,5 +1,5 @@
-<div class="resources">
-  <div class="jumbotron intro">
+<div>
+  <div class="jumbotron intro resources">
     <h1>Welcome to our <br> temple of knowledge!</h1>
     <h3>This is where we share all of our favorite tutorials, guides, and resources.</h3>
   </div>
@@ -16,8 +16,8 @@
   <div class="resource-container">
     <% @resources.each do |resource| %>
       <div class="">
-        <div class="booyah-box">
-          <a href="<%= resource_path(resource) %>"><h3 class="card"><%= resource.name %></h3></a>
+        <div class="booyah-box card">
+          <a href="<%= resource_path(resource) %>"><h3><%= resource.name %></h3></a>
           <%= resource.resource_type %>
           <a href="<%= resource.external_link %>>"><%= resource.external_link %></a>
           <%= resource.description %>
@@ -27,3 +27,4 @@
     <% end %>
   </div>
 </div>
+
