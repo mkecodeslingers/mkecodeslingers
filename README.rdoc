@@ -3,7 +3,7 @@
 
 == Current versions
 
-* Ruby version - currently running ruby 2.2.1p85 (2015-02-26 revision 49769)
+* Ruby version - currently running ruby 2.2.4p230 (2016-12-16 revision 53155)
 * Rails version - currently running Rails 4.2.5
 
 == Purpose of the project
