@@ -3,6 +3,7 @@ Add custom styles in this file to override bootstrap's styles
 */
 
 
+
 /*Adjust Navbar overlay when fixed to top*/
 body {
     background-color: #f9f9f9;
@@ -136,6 +137,7 @@ body {
 }
 
 
+
 /****************
 * Resource Page *
 ****************/
@@ -152,6 +154,36 @@ body {
     margin-bottom: 30px;
 }
 
+.resource-card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.resource-card h4 {
+    margin-top: 0;
+}
+
+.resource-card-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.resource-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resource-card-title,
+.resource-footer {
+    flex-grow: 1;
+}
+
+/******************
+* Card base style *
+******************/
 
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -184,6 +216,8 @@ body {
     padding-left: 3.5%;
 }
 
+
+
 /*************
 * Topic Card *
 *************/
@@ -193,6 +227,7 @@ body {
     border-bottom: 1px solid #d4d9dd;
     margin-bottom: 30px;
 }
+
 
 
 /*********
