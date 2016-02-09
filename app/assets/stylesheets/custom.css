@@ -143,9 +143,9 @@ body {
 ****************/
 
 .resource-container {
-    width: 100%;
-    margin-right: 2%;
+    width: 90%;
     padding-left: 3.5%;
+    margin: 0 auto;
 }
 
 .search-sort {
@@ -181,6 +181,8 @@ body {
     flex-grow: 1;
 }
 
+
+
 /******************
 * Card base style *
 ******************/
@@ -211,9 +213,19 @@ body {
 *************/
 
 .topic-container {
-    width: 100%;
-    margin-right: 2%;
+    width: 90%;
+    margin: 0 auto;
     padding-left: 3.5%;
+}
+
+.container-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-group a {
+    color: #fff;
 }
 
 
@@ -250,4 +262,16 @@ footer div a {
 
 .social {
 	float: right;
+}
+
+
+
+/****************
+* Media Queries *
+****************/
+
+@media (min-width: 465px) {
+    .container-row {
+        justify-content: space-around;
+    }
 }
