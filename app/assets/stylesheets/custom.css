@@ -279,3 +279,13 @@ footer div a {
         justify-content: space-around;
     }
 }
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #f9f9f9;
+    }
+
+    .navbar-inverse .navbar-nav li a {
+        color: #5e5e5e;
+    }
+}
