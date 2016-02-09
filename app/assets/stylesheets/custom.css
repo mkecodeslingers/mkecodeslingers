@@ -3,6 +3,7 @@ Add custom styles in this file to override bootstrap's styles
 */
 
 
+
 /*Adjust Navbar overlay when fixed to top*/
 body {
     background-color: #f9f9f9;
@@ -136,14 +137,15 @@ body {
 }
 
 
+
 /****************
 * Resource Page *
 ****************/
 
 .resource-container {
-    width: 100%;
-    margin-right: 2%;
+    width: 90%;
     padding-left: 3.5%;
+    margin: 0 auto;
 }
 
 .search-sort {
@@ -152,6 +154,42 @@ body {
     margin-bottom: 30px;
 }
 
+.resource-card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.resource-card h4 {
+    margin-top: 0;
+}
+
+.resource-card-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.resource-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resource-card-title,
+.resource-footer {
+    flex-grow: 1;
+}
+
+.search-item {
+    width: 40%;
+}
+
+
+
+/******************
+* Card base style *
+******************/
 
 .booyah-box {
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -179,10 +217,22 @@ body {
 *************/
 
 .topic-container {
-    width: 100%;
-    margin-right: 2%;
+    width: 90%;
+    margin: 0 auto;
     padding-left: 3.5%;
 }
+
+.container-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-group a {
+    color: #fff;
+}
+
+
 
 /*************
 * Topic Card *
@@ -193,6 +243,7 @@ body {
     border-bottom: 1px solid #d4d9dd;
     margin-bottom: 30px;
 }
+
 
 
 /*********
@@ -215,4 +266,26 @@ footer div a {
 
 .social {
 	float: right;
+}
+
+
+
+/****************
+* Media Queries *
+****************/
+
+@media (min-width: 465px) {
+    .container-row {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #f9f9f9;
+    }
+
+    .navbar-inverse .navbar-nav li a {
+        color: #5e5e5e;
+    }
 }
