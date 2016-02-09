@@ -181,6 +181,10 @@ body {
     flex-grow: 1;
 }
 
+.search-item {
+    width: 40%;
+}
+
 
 
 /******************
