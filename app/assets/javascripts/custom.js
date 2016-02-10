@@ -16,6 +16,12 @@ $(window).scroll(function() {
     });
 });
 
+// Truncate to specific character
+var myTag = $('#truncate').text();
+if (myTag.length > 15) {
+  var truncated = myTag.trim().substring(0, 100) + "…";
+  $('#truncate').text(truncated);
+}
 
 
 

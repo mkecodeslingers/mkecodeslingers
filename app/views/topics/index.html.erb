@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div class=" topic-container">
+  <div class=" topic-container" >
     <% @topics.each do |topic| %>
         <div class="">
           <div class="booyah-box">
@@ -40,18 +40,10 @@
                   <%= link_to 'Vote!', upvote_topic_path(topic), class: 'btn btn-info add-new',method: :post %>
                 </div>
               </div>
-              <div class = "row">
-                <div class="col-sm-12 col-sm-offset-5" >
-                  <a href="<%= topic_path(topic) %>">
-                    <h3 class="card"><%= topic.title %></h3>
-                  </a> 
+                <div class="topic-card-title" >
+                  <a href="<%= topic_path(topic) %>"><h3><%= topic.title %></h3></a>
+                  <p><%= topic.description %></p>
                 </div>
-              </div>
-              <div class = "row">
-                <div class="col-sm-12">
-                  <h4><%= topic.description %></h4>
-                </div>
-              </div>
             </div>
         </div>
       </div>

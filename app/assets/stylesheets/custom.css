@@ -199,7 +199,8 @@ body {
     border: 1px solid #ccc;
     border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
     padding:20px;
-    min-height: 20em;
+    min-height: 25em;
+    max-height: 25em;
     margin-left: 2%;
     margin-bottom: 1%;
     width: 45%;
@@ -242,6 +243,17 @@ body {
     padding: 2% 2% 1%;
     border-bottom: 1px solid #d4d9dd;
     margin-bottom: 30px;
+}
+
+.topic-card-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.topic-description-ellipsis {
+  overflow-wrap: break-word;
 }
 
 
