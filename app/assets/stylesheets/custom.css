@@ -110,7 +110,7 @@ body {
 .about {
     background:
                 linear-gradient(#000, transparent 100%),
-                url('mountains.jpg') no-repeat center;
+                url('/assets/mountains.jpg') no-repeat center;
 
     background-size: cover;
     height: 850px;
