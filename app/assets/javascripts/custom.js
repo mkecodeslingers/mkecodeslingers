@@ -16,19 +16,20 @@ $(window).scroll(function() {
     });
 });
 
+//This function will truncate the text for an tag that has the truncate class
+//Set limit variable to length to truncate at
 $(function(){
-       $('.cardClass').each(function(){
-           var myTag = $(this).text();
-           var limit = 100;
-   
-           if (myTag.length > limit){
-       
-               $(this).text(myTag.substring(0, (limit + 1)) + "...");
-           }else{
-               $(this).text(myTag);            
-               } 
-       });
-   });
+    $('.truncate').each(function(){
+        var tagForTruncate = $(this).text();
+        var limit = 100;
+
+        if (tagForTruncate.length > limit){
+            $(this).text(tagForTruncate.substring(0, (limit + 1)) + ". . .");
+        } else {
+            $(this).text(tagForTruncate);            
+        } 
+    });
+});
 
 
 
