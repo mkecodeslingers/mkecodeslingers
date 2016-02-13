@@ -16,12 +16,19 @@ $(window).scroll(function() {
     });
 });
 
-// Truncate to specific character
-var myTag = $('#truncate').text();
-if (myTag.length > 15) {
-  var truncated = myTag.trim().substring(0, 100) + "…";
-  $('#truncate').text(truncated);
-}
+$(function(){
+       $('.cardClass').each(function(){
+           var myTag = $(this).text();
+           var limit = 100;
+   
+           if (myTag.length > limit){
+       
+               $(this).text(myTag.substring(0, (limit + 1)) + "...");
+           }else{
+               $(this).text(myTag);            
+               } 
+       });
+   });
 
 
 
