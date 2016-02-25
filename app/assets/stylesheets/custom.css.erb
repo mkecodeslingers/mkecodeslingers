@@ -269,10 +269,76 @@ body {
 
 .member-pics {
   padding: 50px;
-  display: block;
+  display: inline-block;
 }
 
+.member {
+    width: auto;
+    height: 625px;
+}
 
+.member-image{
+    vertical-align: bottom;
+    padding-top:100px;
+}
+
+.inner {
+    background-color: #d9534f;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
+}
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  height: 100px;
+  left: 0;
+  z-index: 10;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  color: #fff;
+  background-color: #d9534f;
+  text-align: center;
+  text-align: top;
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+    right: 0;
+    left: 0;
+  }
+  .carousel-indicators {
+  }
+}
 
 /*********
 * Footer *
