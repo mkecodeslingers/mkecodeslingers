@@ -22,23 +22,38 @@ class TopicsController < ApplicationController
 	end
 
   	def create
-		@topic = Topic.new(topic_params)
-
-  		if @topic.save
-  			redirect_to @topic
-  		else 
-  			render 'new'
+  		if params[:content].present? # honeypot check
+			@resource = ""
+		else
+			@topic = Topic.new(topic_params)
+		end
+		if(!@topic.blank?)
+  			if @topic.save
+  				redirect_to @topic
+  			else 
+  				render 'new'
+  			end
+  		else
+  			redirect_to(topics_path)
   		end
 	end
 
 	def update
-		@topic = Topic.find(params[:id])
-	 
-	  	if @topic.update(topic_params)
-	  		redirect_to @topic
-	  	else
-	    	render 'edit'
-	  	end
+		if params[:content].present? # honeypot check
+			@resource = ""
+		else
+			@topic = Topic.find(params[:id])
+		end
+	 	
+	 	if(!@topic.blank?)
+	  		if @topic.update(topic_params)
+	  			redirect_to @topic
+	  		else
+	    		render 'edit'
+	  		end
+  		else
+  			redirect_to(topics_path)
+  		end
 	end
 
 	def destroy

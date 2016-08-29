@@ -27,6 +27,12 @@
       <div class="form-group">
         <%= f.label :description %><br>
         <%= f.text_area :description, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group honeypot">
+        <%= label_tag :content %>
+        <%= text_field_tag :content, nil, tabindex: '-1' %>
+        <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
       </div>      
      
       <div class="form-group">

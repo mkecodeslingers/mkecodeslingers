@@ -8,31 +8,45 @@ class ResourcesController < ApplicationController
   	end
 
 	def new
-		@resource = Resource.new
+		@resource = Resource.new 
 	end
 
 	def edit
-	  @resource = Resource.find(params[:id])
+	  @resource = Resource.find(params[:id]) 
 	end
 
 	def create
-		@resource = Resource.new(resource_params)
-
-  		if @resource.save
-  			redirect_to @resource
-  		else
-    		render 'new'
+		if params[:content].present? # honeypot check
+			@resource = ""
+		else
+			@resource = Resource.new(resource_params) 
+		end
+		if (!@resource.blank?)
+  			if @resource.save
+  				redirect_to @resource
+  			else
+    			render 'new'
+  			end
+		else
+			redirect_to resources_path
   		end
   	end
 
   	def update
-	  @resource = Resource.find(params[:id])
-	 
-	  if @resource.update(resource_params)
-	    redirect_to @resource
-	  else
-	    render 'edit'
-	  end
+	  	if params[:content].present? # honeypot check
+			@resource = ""
+		else
+			@resource = Resource.find(params[:id])
+		end
+ 		if (!@resource.blank?)
+	  		if @resource.update(resource_params)
+	    		redirect_to @resource
+	  		else
+	    		render 'edit'
+	  		end
+  		else
+			redirect_to resources_path
+	  	end
 	end
 
 	def destroy
@@ -44,6 +58,6 @@ class ResourcesController < ApplicationController
 
   	private
   		def resource_params
-    		params.require(:resource).permit(:name, :resource_type, :external_link, :description, :category)
+    		params.require(:resource).permit(:name, :resource_type, :external_link, :description, :category, :content)
   		end
 end
